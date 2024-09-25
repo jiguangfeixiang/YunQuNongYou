@@ -1,0 +1,34 @@
+uwsgi
+
+
+
+1.安装
+	source /envs/nb/bin/activate
+
+	pip install uwsgi
+
+
+
+2.基于uwsgi运行flask项目
+	cd 项目目录
+
+
+	- 命令的方式
+		uwsgi --http :8080 --wsgi-file app.py  --callable app
+
+	- 配置文件（推荐）
+		nb_uwsgi.ini
+			[uwsgi]
+			socket = 127.0.0.1:8001
+			chdir = /data/www/day28/
+			wsgi-file = app.py
+			callable = app
+			processes = 1
+			virtualenv = /envs/nb/
+
+		source /envs/nb/bin/activate
+		uwsgi --ini  nb_uwsgi.ini
+
+	- 停止
+		ps -ef|grep nb_uwsgi
+		kill -9 15018

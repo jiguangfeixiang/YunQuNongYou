@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+
     'simpleui',  # 美化后台界面
     'corsheaders',  # 跨域配置
     'django.contrib.admin',
@@ -105,14 +106,28 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'db_trip',  # 数据库名称
         'USER': 'root',  # 账号
-        'PASSWORD': '',  # 密码
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'PASSWORD': '123',  # 密码
+        'HOST': 'localhost', #
+        'PORT': '8082',
         'OPTIONS': {
             "init_command": "SET foreign_key_checks = 0;",
         }
     }
 }
+# 数据库配置
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'AgricultureTrip',  # 数据库名称
+#         'USER': 'root',  # 账号
+#         'PASSWORD': '',  # 密码
+#         'HOST': 'localhost', #
+#         'PORT': '3306',
+#         'OPTIONS': {
+#             "init_command": "SET foreign_key_checks = 0;",
+#         }
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 

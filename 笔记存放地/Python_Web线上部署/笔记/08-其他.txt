@@ -1,0 +1,79 @@
+
+1.项目依赖MySQL怎么办？
+	
+	1.1 安装MySQL服务
+		yum install mariadb-server -y
+		yum install mariadb -y
+	
+	1.2 授权
+		- 创建数据库 day28db
+			CREATE DATABASE day28db DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+		- 创建账户   s5
+			insert into mysql.user(user,host,password) values('s5','%',password('qwe123..'));
+			flush privileges;
+
+		- 授权    
+			grant all privileges on day28db.* to s5@'%';
+			flush privileges; 
+
+		- 测试
+			- 远程测试 OK
+			- 本地测试
+				- 无密码可以登录 -> 去除
+				- 有密码无法登录？
+
+	1.3 启动
+
+	1.4 连接
+		- 命令
+		- navicat
+		- pymysql
+
+2.项目依赖Redis怎么办？
+	
+	2.1 安装
+		yum install redis -y
+
+
+	2.2 配置  /etc/redis.conf
+		- 密码 qwe123..
+		- bind 0.0.0.0
+
+
+		vim /etc/redis.conf
+
+	2.3 启动
+		systemctl start redis
+		systemctl stop redis
+
+		systemctl enable redis
+
+	2.4 代码
+		pip install redis
+
+
+
+
+
+3.域名和Https
+	域名 http://www.5xclass.com:80
+		- 租域名    5xclass.com
+		- 域名解析
+			www.5xclass.com     ->  82.156.54.134
+			study.5xclass.com   ->  82.156.54.135
+			buy.5xclass.com     ->  82.156.54.131
+		- 备案（平台流程）
+
+
+	Https部署 https://www.5xclass.com:443
+		- 申请证书（1年免费）
+		- 上传到服务器
+		- nginx配置 443
+
+
+
+
+
+
+

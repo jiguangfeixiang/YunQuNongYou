@@ -1,0 +1,37 @@
+Nginx
+
+1.安装
+	yum install nginx -y
+
+2.配置
+	- 普通请求    ->  8001端口
+	- /static/   -> /data/www/day28/static
+
+
+	nginx的默认配置文件路径  /etc/nginx/nginx.conf
+
+
+	2.1 删除默认的nginx.conf
+		rm nginx.conf
+
+	2.2 新建 nginx.conf  + 内容拷贝 + 保存
+		cd /etc/nginx/
+
+		vim nginx.conf    创建并打开文件
+		i                 编辑模式
+		ESC
+		:wq
+
+		cat nginx.conf
+
+3.启动Nginx
+	
+	- 启动
+		systemctl start nginx
+		systemctl stop nginx
+		systemctl restart nginx
+	- 开机启动
+		systemctl enable nginx
+
+
+4.访问

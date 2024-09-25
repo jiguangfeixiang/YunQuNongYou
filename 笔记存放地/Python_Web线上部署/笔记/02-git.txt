@@ -1,0 +1,79 @@
+1.电脑安装git
+	
+2.远程仓库
+	https://gitee.com/wupeiqi/day28.git
+
+3. .gitigonre
+
+4.命令
+	4.1 一次性的命令
+		git config --global user.name "武沛齐"
+		git config --global user.email "wupeiqi@live.com"
+
+
+		cd day28
+		git init 
+		git remote add origin https://gitee.com/wupeiqi/day28.git
+
+
+	4.2 经常执行
+
+		git add .
+		git commit -m  'init'
+		git push  origin  master    
+
+		注意：输入账户+密码（码云）
+
+5.下载代码
+	
+	安装git
+		yum install git -y
+
+	- 第一次
+		cd /data/
+		mkdirs www
+		cd /data/www/
+
+		git clone https://gitee.com/wupeiqi/day28.git
+
+		>>>码云账号+密码
+
+	- 之后
+
+		cd /data/www/day18/
+		git pull origin master
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6.烦，通过git上传、下载代码（账号和密码）
+	- 基于账号和密码
+	- SSH
+  
+https://www.bilibili.com/video/BV19E411f76x/

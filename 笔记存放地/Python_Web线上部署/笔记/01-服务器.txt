@@ -1,0 +1,36 @@
+1.为什么用 Centos ？
+	- 日常 windows   收费+图形化界面慢
+	- 部署 linux     免费+图形化界面/非图形化
+
+2.公网IP：82.156.54.134
+
+3.登录服务器
+	- Web界面（非主流）
+	- SSH工具
+		- win（xshell）
+			ssh root@82.156.54.134
+
+		- mac（item2） 【基于公钥+私钥】
+			cd ~/.ssh
+				id_rsa  id_rsa.pub
+
+			ssh-copy-id  -i  ~/.ssh/id_rsa.pub  root@82.156.54.134
+			输入密码
+
+			ssh root@82.156.54.134
+
+
+4.关于端口
+
+	IP地址 --> 电脑
+	 端口  --> A程序
+	 端口  --> B程序
+	 端口  --> C程序
+
+	   22，SSH
+	 3306，MySQL
+	 6379，Redis
+	   80，
+	 443，
+
+5.安全组（配置端口）

@@ -1,0 +1,25 @@
+1.安装virtualenv
+	pip3.9 install virtualenv
+
+
+2.创建虚拟环境（day28）
+	
+	代码：
+		/data/www/day28
+
+	环境：
+		/envs/nb
+
+
+		mkdir /envs
+		virtualenv /envs/nb --python=python3.9
+
+3.激活虚拟环境
+	source /envs/nb/bin/activate
+
+
+4.假设
+	source /envs/nb/bin/activate
+	cd /data/www/day28
+	python app.py
+
